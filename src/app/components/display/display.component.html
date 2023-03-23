@@ -1,0 +1,32 @@
+<body>  
+    <div class="container">
+        <h1>Wallet Details</h1>
+        <table class="table table-hover table-secondary" >
+            <thead>
+              <tr>
+                    <th>Id</th>
+                    <th>Name Of Holder</th>
+                    <th>Name Of Wallet</th>
+                    <th>Email Id</th>
+                    <th>Phone Number</th>
+                    <th>Date Of Wallet Creation</th>
+                    <th>Balance Amount</th>
+                    <th>Password</th>
+              </tr>
+            </thead>
+            <tbody >
+                <tr *ngFor="let wal of wallet" class="clr">
+                    <td>{{wal.id}}</td>
+                    <td>{{wal.nameOfHolder}}</td>
+                    <td>{{wal.nameOfWallet}}</td>
+                    <td>{{wal.email}}</td>
+                    <td>{{wal.phoneNumber}}</td>
+                    <td>{{wal.dateOfWalletCreation}}</td>
+                    <td>{{wal.balanceamount}}</td>
+                    <td>{{wal.password}}</td>
+                </tr>
+            </tbody>
+          </table>
+    </div>
+</body>
+    

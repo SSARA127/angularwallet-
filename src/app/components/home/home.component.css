@@ -1,0 +1,40 @@
+body{
+    display:flex;
+    justify-content: center;
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(../../../assets/images/Bg2.png);
+    background-size: cover;
+    background-position: center;
+    font-family: cursive;
+    font-weight: 1000;
+    height: 500px;
+    overflow:scroll;
+    line-height:2.5;
+    }
+    #message{
+        text-align: center;
+        position:absolute;
+    
+        top:-3px;
+        height:100px;
+    }
+    .image{
+        height: 347px;
+        width: 434px;
+        margin-left: 692px;
+        margin-top: 92px;
+    }
+    
+    .wrapper{
+        position: absolute;
+        top: 22px;
+        width: 700px;
+        height: 480px;
+        background: transparent;
+        border-radius: 20px;
+        color: aliceblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -479px;
+    }
+    

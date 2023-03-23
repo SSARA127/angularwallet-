@@ -1,0 +1,43 @@
+<body>  
+    <div class="text-success" id="message"> <h2>{{name}}</h2></div>
+    <div class="wrapper">
+        <div class="form-box">
+        <h2> Wallet Operations</h2>
+        <form #userForm="ngForm">
+            <div class="input-box">
+                <label>Create Wallet : </label>
+                <a routerLink="/create"><button type="submit" class="btn login" (click)="displayDetails()" >Create Wallet</button></a>
+                </div>
+                <div class="input-box">
+                    <label>Get Wallet By Id : </label>
+                    <a routerLink="/get-wallet-by-id"><button type="submit" class="btn login" (click)="displayDetails()" >Get Wallet By Id</button></a>
+                </div>
+                <div class="input-box">
+                    <label>Get All Wallet Information : </label>
+                    <a routerLink="/getAllWallet"><button type="submit" class="btn login" (click)="displayDetails()" >Get All Wallet </button></a>
+                </div>
+                <div class="input-box">
+                <label>Update Wallet : </label>
+                <a routerLink="/updateid"><button type="submit" class="btn login" (click)="displayDetails()" >Update Wallet</button></a>
+                </div>
+                <div class="input-box">
+                <label>Delete Wallet : </label>
+                <a routerLink="/delete"><button type="submit" class="btn login" (click)="displayDetails()" >Delete Wallet</button></a>
+                </div>
+                <div class="input-box">
+                <label>Transfer Funds From and To Wallet : </label>
+                <a routerLink="/transfer"><button type="submit" class="btn login" (click)="displayDetails()" >Transfer Amount</button></a>
+                </div>
+                <div class="input-box">
+                <label>Withdraw Funds From Wallet : </label>
+                <a routerLink="/withdraw"><button type="submit" class="btn login" (click)="displayDetails()" >Withdraw Amount</button></a>
+                </div>
+                <div class="input-box">
+                <label>Add Funds To Wallet : </label>
+                <a routerLink="/addAmount"><button type="submit" class="btn login" (click)="displayDetails()" >Add Amount</button></a>
+                </div>
+        </form>
+        </div>
+    </div>
+</body>
+    

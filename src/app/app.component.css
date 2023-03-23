@@ -1,0 +1,39 @@
+.navbar{
+    border-bottom: 4px solid #009688;
+    border-radius: 0px;
+    background: linear-gradient(145deg, #20483b, #1b3c32);
+    box-shadow:  21px 21px 42px #0e1e19,-21px -21px 42px #2f6855;
+    z-index: -1;
+}
+.bb{
+    height:120px;
+    height: 4px;
+    background-color: aliceblue;
+    border-radius: 0px;
+    background: linear-gradient(145deg, #20483b, #1b3c32);
+    box-shadow:  21px 21px 42px #0e1e19,-21px -21px 42px #2f6855;
+    z-index:-1;
+}
+#nav_content{
+    
+    color:aliceblue;
+}
+.imglogo{
+    height:90px;
+    width :250px;
+    background: transparent;
+}
+#navbarNav{
+    align-items: center;
+    left:10%
+}
+.logout{
+    position:relative;
+    top: 7px;
+    margin-left: 600px;
+    text-decoration: none;
+    width:100px;
+}
+a #nav_content .logout{
+  width: 10px;
+}

@@ -1,0 +1,44 @@
+<body>  
+    <div class="wrapper">
+        <div class="form-box">
+        <h2> Add Amount </h2>
+        <form #userForm="ngForm">
+            <div class="input-box">
+                <span class="icon"><ion-icon name="id-card"></ion-icon></span>
+                <input type="number" [(ngModel)]="wallet.id" #numberRef="ngModel" name="eid" id="name"
+                    pattern="[0-9]"  required>
+                <div *ngIf="numberRef.invalid && (numberRef.touched || numberRef.dirty)">
+                    <p *ngIf="numberRef.errors?.['required']" class="text-secondary">Wallet Id is required, cant be balnk.</p>
+                </div>
+                <label>WalletId</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="wallet"></ion-icon></span>
+                <input type="number" [(ngModel)]="wallet.balanceamount" #amountRef="ngModel" name="amountid" id="name"
+                    pattern="[0-9]"  required>
+                <div *ngIf="amountRef.invalid && (amountRef.touched || amountRef.dirty)">
+                    <p *ngIf="amountRef.errors?.['required']" class="text-secondary"> Amount is required, cant be balnk.</p>
+                </div>
+                <label>Amount</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" [(ngModel)]="wallet.password" #passwordRef="ngModel" name="password" id="passwordId"
+              pattern="[a-zA-Z0-9a-zA-Z0-9!@#$%^&*]{4,16}" required>
+                
+            <div *ngIf="passwordRef.invalid && (passwordRef.touched || passwordRef.dirty)">
+              <p *ngIf="passwordRef.errors?.['required']" class="text-secondary">Password is required, cant be balnk.</p>
+              <p *ngIf="passwordRef.errors?.['pattern']" class="text-secondary">Password must be at least 4 chars.</p>
+            </div>
+                <label>Password</label>
+            </div>
+            <button type="submit" class="btn login" (click)="displayDetails()" >Add Amount</button>
+            <div class="login-register">
+                <p class="text-danger">{{incorrect}}</p>
+            </div>
+        </form>
+        </div>
+    </div>
+    
+    </body>
+    

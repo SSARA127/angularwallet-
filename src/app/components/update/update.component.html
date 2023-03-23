@@ -1,0 +1,57 @@
+
+<body>  
+    <div class="wrapper">
+        <div class="form-box">
+        <h2> Update Wallet</h2>
+        <form #userForm="ngForm">
+            <div class="input-box">
+                <span class="icon"><ion-icon name="id-card"></ion-icon></span>
+                <input type="number" [(ngModel)]="wallet.id"  name="id" id="id" >
+                <label>UserId</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="person"></ion-icon></span>
+                <input type="text" [(ngModel)]="wallet.nameOfHolder"  name="nameOfHolder" id="nameOfHolder">
+                <label>Name Of Holder</label>
+            </div>
+
+            <div class="input-box">
+                <span class="icon"><ion-icon name="person"></ion-icon></span>
+                <input type="text" [(ngModel)]="wallet.nameOfWallet"  name="nameOfWallet" id="nameOfWallet">
+                <label>Name Of Wallet</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                <input type="text" [(ngModel)]="wallet.email" name="email" id="email">
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" [(ngModel)]="wallet.password"  name="password" id="password">
+                <label>Password</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="call"></ion-icon></span>
+                <input type="text" [(ngModel)]="wallet.phoneNumber"  name="phoneNumber" id="phoneNumber">
+                <label>Phone Number</label>
+            </div>
+
+            <div class="input-box">
+                <span class="icon"><ion-icon name="calendar-number"></ion-icon></span>
+                <input type="date" min='2023-03-19' [(ngModel)]="wallet.dateOfWalletCreation"  name="dateOfWalletCreation" id="dateOfWalletCreation" >
+                <label>Date Of Wallet Creation</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="wallet"></ion-icon></span>
+                <input type="number" [(ngModel)]="wallet.balanceamount"  name="balanceamount" id="balanceamount">
+                <label>Amount</label>
+            </div>
+            <button type="submit" (click)="onSubmit()" class="btn login">Update Wallet</button>
+            <div class="login-register">
+                <p class="text-danger">{{incorrect}}</p>
+            </div>
+        </form>
+        </div>
+    </div>
+</body>
+    

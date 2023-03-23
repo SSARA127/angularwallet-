@@ -1,0 +1,54 @@
+<body>  
+<div class="wrapper">
+    <img [src]="iconimagesrc" class="imgicon">
+    <div class="form-box">
+    <h2> Login</h2>
+    <form #userForm="ngForm">
+        <div class="input-box">
+            <span class="icon"><ion-icon name="id-card"></ion-icon></span>
+            <input type="number" [(ngModel)]="id" #numberRef="ngModel" name="eid" id="name"
+                pattern="[0-9]"  required>
+            <div *ngIf="numberRef.invalid && (numberRef.touched || numberRef.dirty)">
+                <p *ngIf="numberRef.errors?.['required']" class="text-secondary">UserId is required, cant be balnk.</p>
+            </div>
+            <label>UserId</label>
+        </div>
+        <div class="input-box">
+            <span class="icon"><ion-icon name="person"></ion-icon></span>
+            <input type="text" [(ngModel)]="wallet.name" #nameRef="ngModel" name="name" id="name"
+                pattern="[A-Za-z ]{3,}" title="Only chars are allowed,Min 3 char required" required>
+            <div *ngIf="nameRef.invalid && (nameRef.touched || nameRef.dirty)">
+                <p *ngIf="nameRef.errors?.['required']" class="text-secondary">UserName is required, cant be balnk.</p>
+                <p *ngIf="nameRef.errors?.['pattern']" class="text-secondary">UserName must have at least 3 chars, only chars are
+                    allowed.</p>
+            </div>
+            <label>Username</label>
+        </div>
+        <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input type="password" [(ngModel)]="wallet.password" #passwordRef="ngModel" name="password" id="passwordId"
+          pattern="[a-zA-Z0-9a-zA-Z0-9!@#$%^&*]{4,16}" required>
+            
+        <div *ngIf="passwordRef.invalid && (passwordRef.touched || passwordRef.dirty)">
+          <p *ngIf="passwordRef.errors?.['required']" class="text-secondary">Password is required, cant be balnk.</p>
+          <p *ngIf="passwordRef.errors?.['pattern']" class="text-secondary">Password must be at least 4 chars.</p>
+        </div>
+            <label>Password</label>
+        </div>
+        
+        <div class="remember-forgot">
+            <label><input type="checkbox">Remember me</label>
+            <a routerLink="/forgotpassword" >Forgot Password</a><br>
+        </div>
+        <button type="submit" class="btn login" (click)="displayDetails()" >Login</button>
+        
+        
+        <div class="login-register">
+            <p class="text-danger">{{incorrect}}</p>
+            <p>Don't have an account? <a routerLink="/registration" class="register-link">Register</a></p>
+        </div>
+    </form>
+    </div>
+</div>
+
+</body>

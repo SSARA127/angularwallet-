@@ -1,0 +1,42 @@
+<body>  
+    <div class="wrapper">
+        <div class="form-box">
+        <h2> Help</h2>
+        <form #userForm="ngForm">
+            <div class="input-box">
+                <span class="icon"><ion-icon name="id-card"></ion-icon></span>
+                <input type="number" [(ngModel)]="wallet.id" #numberRef="ngModel" name="eid" id="name"
+                    pattern="[0-9]"  required>
+                <div *ngIf="numberRef.invalid && (numberRef.touched || numberRef.dirty)">
+                    <p *ngIf="numberRef.errors?.['required']" class="text-secondary">UserId is required, cant be balnk.</p>
+                </div>
+                <label>UserId</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="person"></ion-icon></span>
+                <input type="text" [(ngModel)]="wallet.name" #nameRef="ngModel" name="name" id="name"
+                    pattern="[A-Za-z ]{3,}" title="Only chars are allowed,Min 3 char required" required>
+                <div *ngIf="nameRef.invalid && (nameRef.touched || nameRef.dirty)">
+                    <p *ngIf="nameRef.errors?.['required']" class="text-secondary">UserName is required, cant be balnk.</p>
+                    <p *ngIf="nameRef.errors?.['pattern']" class="text-secondary">UserName must have at least 3 chars, only chars are
+                        allowed.</p>
+                </div>
+                <label>Username</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="person"></ion-icon></span>
+                <input type="text" [(ngModel)]="message" #messageRef="ngModel" name="message" id="name"
+                    pattern="[A-Za-z0-9,. ]{3,}"  required>
+                <div *ngIf="messageRef.invalid && (messageRef.touched || messageRef.dirty)">
+                    <p *ngIf="messageRef.errors?.['required']" class="text-secondary">Message is required, cant be balnk.</p>
+                    
+                </div>
+                <label>message</label>
+            </div>
+            <a routerLink="/login"><button type="submit" class="btn login" (click)="displayDetails()" >Send</button></a>
+        </form>
+        </div>
+    </div>
+    
+    </body>
+    
